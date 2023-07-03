@@ -7,4 +7,66 @@
     <RootNamespace>inventory_management</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\Images\background\cta-bg.jpg" />
+    <None Include="wwwroot\Images\Clients\amazon.jpg" />
+    <None Include="wwwroot\Images\Clients\apple.png" />
+    <None Include="wwwroot\Images\Clients\bashundara.png" />
+    <None Include="wwwroot\Images\Clients\marathon.png" />
+    <None Include="wwwroot\Images\Clients\microsoft.jpg" />
+    <None Include="wwwroot\Images\Clients\Samsung.png" />
+    <None Include="wwwroot\Images\Clients\tesla.png" />
+    <None Include="wwwroot\Images\Clients\Toyota.jpg" />
+    <None Include="wwwroot\Images\Clients\walmart.png" />
+    <None Include="wwwroot\Images\icons\analysis.png" />
+    <None Include="wwwroot\Images\icons\email.png" />
+    <None Include="wwwroot\Images\icons\facebook.png" />
+    <None Include="wwwroot\Images\icons\favicon.ico" />
+    <None Include="wwwroot\Images\icons\instagram.png" />
+    <None Include="wwwroot\Images\icons\linkedin.png" />
+    <None Include="wwwroot\Images\icons\map.png" />
+    <None Include="wwwroot\Images\icons\phone.png" />
+    <None Include="wwwroot\Images\icons\service.png" />
+    <None Include="wwwroot\Images\icons\shiping.png" />
+    <None Include="wwwroot\Images\icons\support.png" />
+    <None Include="wwwroot\Images\icons\twitter.png" />
+    <None Include="wwwroot\Images\Inventory\car1.jpg" />
+    <None Include="wwwroot\Images\Inventory\car2.jpg" />
+    <None Include="wwwroot\Images\Inventory\car3.jpg" />
+    <None Include="wwwroot\Images\Inventory\car4.jpg" />
+    <None Include="wwwroot\Images\Inventory\electronics1.jpg" />
+    <None Include="wwwroot\Images\Inventory\electronics2.jpg" />
+    <None Include="wwwroot\Images\Inventory\electronics3.jpg" />
+    <None Include="wwwroot\Images\Inventory\food1.jpg" />
+    <None Include="wwwroot\Images\Inventory\food2.jpg" />
+    <None Include="wwwroot\Images\Inventory\food3.jpg" />
+    <None Include="wwwroot\Images\Inventory\food4.jpg" />
+    <None Include="wwwroot\Images\logos\logo.png" />
+    <None Include="wwwroot\Images\others\img1.jpg" />
+    <None Include="wwwroot\Images\others\img10.jpg" />
+    <None Include="wwwroot\Images\others\img17.jpg" />
+    <None Include="wwwroot\Images\others\img2.jpg" />
+    <None Include="wwwroot\Images\others\img3.png" />
+    <None Include="wwwroot\Images\others\img5.png" />
+    <None Include="wwwroot\Images\others\my-pic.png" />
+    <None Include="wwwroot\Images\others\skillSectionImg.png" />
+    <None Include="wwwroot\Images\slider\car.jpg" />
+    <None Include="wwwroot\Images\slider\electronics.jpg" />
+    <None Include="wwwroot\Images\slider\fashion.jpg" />
+    <None Include="wwwroot\Images\slider\food.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="7.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
 </Project>

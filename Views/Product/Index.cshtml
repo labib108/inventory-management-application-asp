@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "List of Product";
+}
+<div class="container">
+    <h2>Product Details</h2>
+    <p>Here is the details about all the Product available in shop.Admin and shop owner can add product or remove product</p>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.ProductName) </th>
+                <th>@Html.DisplayNameFor(model => model.ProductDescription)</th>
+                <th>@Html.DisplayNameFor(model => model.Price)</th>
+                <th>@Html.DisplayNameFor(model => model.Image) </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem =>item.ProductName) </td>
+                    <td>@Html.DisplayFor(modelItem =>item.ProductDescription)</td>
+                    <td>@Html.DisplayFor(modelItem =>item.Price)</td>
+                    <td>@Html.DisplayFor(modelItem =>item.Image) </td>
+                    <td>
+                        <a class="btn btn-danger">Delet</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

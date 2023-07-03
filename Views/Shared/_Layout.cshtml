@@ -5,40 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - inventory_management</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/style.css" />
     <link rel="stylesheet" href="~/inventory_management.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">inventory_management</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
+    <header class="p-3 bg-dark text-white sticky-top">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="@Url.Action("Index", "Home")" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="~/Images/logos/logo.png" alt="logo" class="header-logo img-fluid rounded-circle me-3S" style="max-width: 100px;" />
+                </a>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link px-3 text-white" })</li>
+                    <li>@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link px-3 text-white" })</li>
+                    <li>@Html.ActionLink("Services", "Services", "Home", null, new { @class = "nav-link px-3 text-white" })</li>
+                    <li>@Html.ActionLink("Features", "Features", "Home", null, new { @class = "nav-link px-3 text-white" })</li>
+                    <li>@Html.ActionLink("Pricing", "Pricing", "Home", null, new { @class = "nav-link px-3 text-white" })</li>
+                    <li>@Html.ActionLink("Blog", "Blog", "Home", null, new { @class = "nav-link px-3 text-white" })</li>
+                    <li>@Html.ActionLink("FAQs", "FAQs", "Home", null, new { @class = "nav-link px-3 text-white" })</li>
+                    <li>@Html.ActionLink("Contact Me", "Contact", "Home", null, new { @class = "nav-link px-3 text-white" })</li>
+                </ul>       
             </div>
-        </nav>
+        </div>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+    <div class="">
+        <main role="main" class="">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - inventory_management - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="text-center text-lg-start text-white" style="background-color: #3e4551">
+        <div class="container p-4 pb-0">
+            <section class="">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                        <h3 class="text-uppercase footer-heading">Inventory<br> Management<br> system</h3>
+                        <p>Thank you for visiting our website. Explore our wide range of products and find what you need.</p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-capitalize">Useful Links</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="my-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                            <li class="my-2"><a href="#" class="text-white text-decoration-none">About</a></li>
+                            <li class="my-2"><a href="#" class="text-white text-decoration-none">Terms and Condition</a></li>
+                            <li class="my-2"><a href="#" class="text-white text-decoration-none">Privacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-capitalize">Our Services</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="my-2"><a href="#!" class="text-white text-decoration-none">Car Inventory</a></li>
+                            <li class="my-2"><a href="#!" class="text-white text-decoration-none">Electronics Inventory</a></li>
+                            <li class="my-2"><a href="#!" class="text-white text-decoration-none">Food Inventory</a></li>
+                            <li class="my-2"><a href="#!" class="text-white text-decoration-none">Cloths and fashion </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Company</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="my-2"><a href="#" class="text-white text-decoration-none">News</a></li>
+                            <li class="my-2"><a href="#" class="text-white text-decoration-none">Leadership</a></li>
+                            <li class="my-2"><a href="#" class="text-white text-decoration-none">Careers</a></li>
+                            <li class="my-2"><a href="#" class="text-white text-decoration-none">Awards</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Strategy</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li class="my-2"><a href="#!" class="text-white text-decoration-none">Supply Strategy</a></li>
+                            <li class="my-2"><a href="#!" class="text-white text-decoration-none">Inventory Optimization</a></li>
+                            <li class="my-2"><a href="#!" class="text-white text-decoration-none">Strategic Cost management</a></li>
+                            <li class="my-2"><a href="#!" class="text-white text-decoration-none">Sustainability</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <hr class="mb-4" />           
+
+            <section class="mb-4 text-center">
+                <a class="btn btn-floating m-1" href="#!" role="button">
+                    <img src="~/Images/icons/facebook.png" alt="facebook icon" style="width: 50px;" />
+                </a>
+                <a class="btn btn-floating m-1" href="#!" role="button">
+                    <img src="~/Images/icons/instagram.png" alt="instagram icon" style="width: 50px;" />
+                </a>
+                <a class="btn btn-floating m-1" href="#!" role="button">
+                    <img src="~/Images/icons/linkedin.png" alt="linkedin icon" style="width: 50px;" />
+                </a>
+                <a class="btn btn-floating m-1" href="#!" role="button">
+                    <img src="~/Images/icons/twitter.png" alt="twitter icon" style="width: 50px;" />
+                </a>
+                <a class="btn btn-floating m-1" href="#!" role="button">
+                    <img src="~/Images/icons/map.png" alt="map icon" style="width: 50px;" />
+                </a>
+                <a class="btn btn-floating m-1" href="#!" role="button">
+                    <img src="~/Images/icons/phone.png" alt="phone icon" style="width: 50px;" />
+                </a>
+                <a class="btn btn-floating m-1" href="#!" role="button">
+                    <img src="~/Images/icons/email.png" alt="email icon" style="width: 50px;" />
+                </a>
+            </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2023 Copyright:
+            <a class="text-white text-decoration-none fw-bold" href="#">Sheikh Abu Buckker Siddiq Labib</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

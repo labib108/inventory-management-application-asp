@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Order>
+@{
+    ViewData["Title"] = "List of Order";
+}
+<div class="container">
+    <h2>Order Details</h2>
+    <p>Here is the details about all the Order by user.Order details save autometically in the databse.</p>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.ProdectId) </th>
+                <th>@Html.DisplayNameFor(model => model.CustomerId)</th>
+                <th>@Html.DisplayNameFor(model => model.ShopId)</th>
+                <th>@Html.DisplayNameFor(model => model.OrderDate) </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem =>item.ProdectId) </td>
+                    <td>@Html.DisplayFor(modelItem =>item.CustomerId)</td>
+                    <td>@Html.DisplayFor(modelItem =>item.ShopId)</td>
+                    <td>@Html.DisplayFor(modelItem =>item.OrderDate) </td>
+                    <td>
+                        <a class="btn btn-danger">Delet</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

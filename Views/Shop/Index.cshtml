@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Shop>
+@{
+    ViewData["Title"] = "List of Shop";
+}
+<div class="container">
+    <h2>Shop Details</h2>
+    <p>Here is the details about all the shop under this inventory.Admin can add shop or remove shop</p>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.ShopName) </th>
+                <th>@Html.DisplayNameFor(model => model.ShopType)</th>
+                <th>@Html.DisplayNameFor(model => model.ShopLocation)</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem =>item.ShopName) </td>
+                    <td>@Html.DisplayFor(modelItem =>item.ShopType)</td>
+                    <td>@Html.DisplayFor(modelItem =>item.ShopLocation)</td>
+                    <td>
+                        <a class="btn btn-danger">Delet</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
